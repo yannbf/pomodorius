@@ -37,7 +37,7 @@ public class TaskActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_task);
         subscribe();
 
-        Toast.makeText(getBaseContext(),"Nota: os valores foram trocados para que você possa testar sem esperar tanto. Para calculos corretos, é só descomentar as partes na classe TaskActivity!.", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(),"Nota: os valores foram trocados para que você possa testar sem esperar tanto. Para calculos corretos, é só descomentar as partes na classe PomodoroWorker!.", Toast.LENGTH_LONG).show();
 
         taskDao = new TaskDao(this);
 
@@ -133,7 +133,7 @@ public class TaskActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.taskStartButton:
                 Intent startIntent = new Intent(TaskActivity.this, PomodoroWorker.class);
-                startIntent.putExtra("currentTask", task); 
+                startIntent.putExtra("currentTask", task);
 
                 startService(startIntent);
                 break;
