@@ -1,0 +1,1 @@
+CREATE TABLE tasks (_id INTEGER NOT NULL PRIMARY KEY, title TEXT NOT NULL, description TEXT, pomodoro INTEGER NOT NULL, short_break INTEGER NOT NULL, long_break INTEGER NOT NULL);
